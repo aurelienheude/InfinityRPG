@@ -7,7 +7,21 @@ class mobs
 		
 	}
 }
+class coins
+{
+	function show_coins()
+	{
 
+	}
+}
+
+class premium
+{
+	function show_premium_feature()
+	{
+		
+	}
+}
 class player
 {
 	function show_player_info()
@@ -33,7 +47,7 @@ class recolt
 {
 	function show_recolt()
 	{
-		
+
 	}
 }
 
