@@ -10,7 +10,22 @@
 </head>
 <body>
 
-<?php include "controllers/library.php"; ?>
+<form action="" method="post">
+    <input type="submit" name="xp_sub" value="gagner de l'xp" />
+</form>
+
+<?php
+
+    include "controllers/library.php"; 
+    
+    if(isset($_POST["xp_sub"]))
+    {
+        $objet = new mobs;
+        $objet->show_mobs_info($_POST["xp_sub"]);
+    }
+    
+?>
+
 
 </body>
 </html>

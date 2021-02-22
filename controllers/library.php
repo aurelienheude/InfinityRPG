@@ -5,8 +5,15 @@ class mobs
 	function show_mobs_info()
 	{
 		
+		if(isset($_POST["xp_sub"]))
+		{
+			$result = 50;
+		}
+
+		echo $result;
 	}
 }
+
 class coins
 {
 	function show_coins()
@@ -19,7 +26,7 @@ class premium
 {
 	function show_premium_feature()
 	{
-		
+
 	}
 }
 class player
