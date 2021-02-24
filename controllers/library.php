@@ -21,8 +21,7 @@ class player
 
 		//  Récupération de l"utilisateur et de son pass hashé
 		$req = $sql->prepare("SELECT * FROM players WHERE pseudo_player = :pseudo_player");
-		$req->execute(array(
-			"pseudo_player" => $_POST["pseudo_player"]));
+		$req->execute(array("pseudo_player" => $_POST["pseudo_player"]));
 		$resultat = $req->fetch();
 
 		if ($resultat["password_player"] != $_POST["password_player"])
