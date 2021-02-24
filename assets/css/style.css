@@ -1,13 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 *
 {
+    font-family: 'Roboto', sans-serif;
+}
 
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+nav a
+{
+    display: flex;
+    padding: 7px;
+
+    transition: 0.3s;
+
+    color: white;
+    background: none;
+}
+
+nav a:hover
+{
+    background: rgba(0, 0, 0, 0.089);
 }
 
 html
 {
-    margin: 0px !important;
-    padding: 0px !important;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
+
+    background: #164951;
 }
 
 body
@@ -16,21 +43,132 @@ body
     padding: 0px;
     height: 100%;
 }
+::placeholder
+{
+    color: white;
+    transition: 0.3s;
+}
+
+.register
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.inputT
+{
+    background:rgba(255, 255, 255, 0.137);
+    box-shadow: 3px 3px 0px 3px rgba(0, 0, 0, 0.096);
+    border: none;
+    outline: none;
+    border-bottom: 3px solid white;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+        
+    margin-top: 1em;
+
+    transition: 0.3s;
+}
+
+.inputT:hover
+{
+    background:rgba(0, 0, 0, 0.137);
+}
+
+.inputG
+{
+    margin-top: 1em;
+    padding: 16px;
+
+    font-weight: bold;
+    border: none;
+    background:rgba(255, 255, 255, 0.137);
+    box-shadow: 3px 3px 0px 3px rgba(0, 0, 0, 0.096);
+    color: white;
+    
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.inputG:hover
+{
+    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.096);
+    background:rgba(0, 0, 0, 0.137);
+}
+
+form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-width: 400px;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.315);
+    box-shadow: -15px 15px 0px 1px rgba(0, 0, 0, 0.096);
+}
 
 nav
 {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    height: 5%;
-    background: white;
-    box-shadow: 0px -2px 2px 4px #000;
+    justify-content: space-around;
+    box-shadow: 0px 5px 0px 1px rgba(0, 0, 0, 0.096);
 }
 
-nav h1
+p
+{
+    color: white;
+}
+
+h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 4px solid rgba(0, 0, 0, 0.205);
+    color: white;
+}
+
+.adventure
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 2%;
+}
+
+.adventure_box
 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    flex-grow: 3;
+
+    height: 200px;
+
+    background:rgba(138, 138, 138, 0.096);
+
+    transition: 0.3s;
+}
+
+.adventure_box:hover
+{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.096);
+}
+
+li{
+    list-style: none;
+    color: white;
 }

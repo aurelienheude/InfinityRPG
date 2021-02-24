@@ -9,19 +9,36 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<!--
+<div class="register">
+    <form action="" method="post">
+        <input type="text" name="pseudo_player" class="inputT" placeholder="pseudo" required>
+        <input type="email" name="password_player" class="inputT" placeholder="email" required>
+        <input type="password" name="email_player" class="inputT" placeholder="password" required>
+        <input type="text" name="description_player" class="inputT" placeholder="description" required>
 
-<form action="" method="post">
-    <input type="submit" name="xp_sub" value="gagner de l'xp" />
-</form>
+        <input type="submit" name="go" class="inputG" value="INSCRIPTION">
+    </form>
+</div>
+-->
+
+<div class="register">
+    <form action="" method="post">
+        <input type="text" name="pseudo_player" class="inputT" placeholder="pseudo" required>
+        <input type="password" name="password_player" class="inputT" placeholder="mot de passe" required>
+
+        <input type="submit" name="go" class="inputG" value="INSCRIPTION">
+    </form>
+</div>
 
 <?php
 
     include "controllers/library.php"; 
     
-    if(isset($_POST["xp_sub"]))
+    if(isset($_POST["go"]))
     {
-        $objet = new mobs;
-        $objet->show_mobs_info($_POST["xp_sub"]);
+        $objet = new player;
+        $objet->connect();
     }
     
 ?>
