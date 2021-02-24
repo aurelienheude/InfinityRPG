@@ -113,8 +113,26 @@ class guild
 class info
 {
 	function leaderboard()
-	{
+	{	
+		$host = "localhost";
+		$dbname= "infinity_rpg";
+		$charset = "utf8";
+		$user = "root";
+		$password = "";
+	
+		$sql = new PDO("mysql:host=".$host.";dbname=".$dbname.";charset=".$charset."", $user, $password);
 
+		//  Récupération de l"utilisateur et de son pass hashé
+		$req = $sql->prepare("SELECT pseudo_player, lv_player  FROM players ORDER BY lv_player ASC");
+		$req->execute(array());
+
+		while($data = $req->fetch())
+		{
+			echo "<li>pseudo : ".$data["pseudo_player"]."</li>
+				  <li>lv : ".$data["lv_player"];
+		}
+
+		$req->closeCursor();
 	}
 
 	function leaderboard_guild()
