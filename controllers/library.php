@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class player
 {
 	function show_player_info()
@@ -105,6 +107,42 @@ class player
 	function modify_player()
 	{
 		/* UPDATE */
+	}
+}
+
+
+
+class aventure
+{
+	/** @var string */
+
+	private $player;/*
+	private $dmg;
+	private $mob;
+	private $health;
+	private $xp;
+	private $coins;*/
+	
+	public function __construct(string $new_player/*, int $new_dmg, string $mob, int $health, int $xp, int $coins*/)
+	{
+		$this->set_player($new_player);/*
+		$this->set_new_dmg();
+		$this->set_mob();
+		$this->set_new_health();
+		$this->set_new_xp();
+		$this->set_new_coins();*/
+	}	 
+
+	/** GETTER **/
+	public function get_player()
+	{
+		echo $this->player;
+	}
+
+	/** SETTER **/
+	public function set_player(string $new_player)
+	{
+		$this->player = $new_player;
 	}
 }
 
