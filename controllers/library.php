@@ -132,7 +132,7 @@ class aventure
 		$this->set_new_xp();
 		$this->set_new_coins();*/
 	}	 
-
+	
 	/** GETTER **/
 	public function get_player()
 	{
